@@ -1,6 +1,7 @@
 require 'sinatra/base'
 require './lib/spaces.rb'
 
+
 class MakersBnB < Sinatra::Base
 
   get '/listings' do
