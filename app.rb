@@ -12,7 +12,7 @@ class MakersBnB < Sinatra::Base
   post '/listings' do
     flatName = params['title']
     Spaces.add(flatName)
-    redirect '/'
+    redirect '/listings'
   end
 
 run! if app_file == $0
