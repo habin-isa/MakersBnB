@@ -1,10 +1,26 @@
-<h2> Bork BnB </H2>
-<h3> <%= @spaces %> </h3>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
 
-<form action='/listings' method='post'>
-  List your pet space here:
+<div id="headline"> Bork BnB </div>
+<br>
 
-  <input type='text' name='title'>
+<h3> <%= @space %> </h3>
+
+<h2><form action='/listings' method='post'>
+  Title? <input type='text' name='title'>
   <br>
-  <button>List your Bork</button>
-</form>
+  <br>
+  <center>
+  <button id="button1"> List your Bork </button>
+</center>
+</form></h2>
+
+
+<div class="content">Bork BnB is owned by Bible Borkers Inc.</div>
+<footer>Est. 2018</footer>
+
+</body>
+</html>

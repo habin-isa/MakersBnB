@@ -1,0 +1,26 @@
+#headline {
+  font-size: 75px;
+  text-align: center;
+  font-family: courier;
+  color: rgb(0,0,33);
+}
+
+#button1 {
+  border-style: dotted;
+  border-width: 2px;
+  background-color: rgb(0,0,33);
+  color: white;
+  font-size: 25px;
+}
+
+.content {
+    /* min-height: calc(100vh - 120px);
+    /* 80px header + 40px footer = 120px  */ */
+}
+
+
+footer {
+  colour: rgb(0,0,33)
+  font-size: 20px;
+
+}
