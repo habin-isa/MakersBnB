@@ -14,9 +14,14 @@ class Spaces
 
 
   def self.add(space)
+    connect_to_database
+    connection.exec("INSERT INTO borks (title) VALUES('#{title}')")
     @@spaces << space
   end
 
+  # def self.add(space)
+  #   @@spaces << space
+  # end
 
   private
 
