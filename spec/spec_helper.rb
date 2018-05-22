@@ -19,8 +19,8 @@ Capybara.app = MakersBnB
 RSpec.configure do |config|
   config.before(:each) do
       p "Setting up a database"
-      connection = PG.connect(dbname: 'makers_bnb_test')
-      connection.exec("TRUNCATE spaces;")
+      connection = PG.connect(dbname: 'bork_bnb_test')
+      connection.exec("TRUNCATE borks;")
     end
   end
 
