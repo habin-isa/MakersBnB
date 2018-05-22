@@ -18,4 +18,6 @@ feature 'Homepage' do
     expect(page).to have_content '5* Putney Pug Pit'
   end
 
+  
+
 end
