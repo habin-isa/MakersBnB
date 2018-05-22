@@ -7,10 +7,25 @@ require File.join(File.dirname(__FILE__), '..', 'app.rb')
 # Require all the testing gems
 require 'capybara'
 require 'capybara/rspec'
+require 'pg'
 require 'rspec'
 
 # Tell Capybara to talk to BookmarkManager
 Capybara.app = MakersBnB
+
+
+
+
+RSpec.configure do |config|
+  config.before(:each) do
+      p "Setting up a database"
+      connection = PG.connect(dbname: 'makers_bnb_test')
+      connection.exec("TRUNCATE spaces;")
+    end
+  end
+
+
+
 
 ### the rest of the file ###
 RSpec.configure do |config|
