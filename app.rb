@@ -1,9 +1,10 @@
 require 'sinatra/base'
 
+
 class MakersBnB < Sinatra::Base
 
   get '/' do
-    'Hello world!'
+    erb(:index)
   end
 
 
