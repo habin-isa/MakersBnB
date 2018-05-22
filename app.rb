@@ -1,7 +1,6 @@
 require 'sinatra/base'
 require './lib/spaces.rb'
 
-
 class MakersBnB < Sinatra::Base
 
   get '/listings' do
@@ -10,7 +9,7 @@ class MakersBnB < Sinatra::Base
   end
 
   post '/listings' do
-    flatName = params['title']
+    borkName = params['title']
     Spaces.add(flatName)
     redirect '/listings'
   end
