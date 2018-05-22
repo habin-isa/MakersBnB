@@ -2,34 +2,25 @@ require 'pg'
 
 class Spaces
 
-  @@spaces = ['Bork 1', 'Bork 2']
-
-
-
   def self.all
-    connect_to_database
-    list = @@con_db.exec "SELECT * FROM borks"
-    list.map { |item| result["title"] }
+    connection = connect_to_database
+    list = connection.exec "SELECT * FROM borks"
+    alpha = list.map { |item| item['title']}
   end
-
 
   def self.add(space)
-    connect_to_database
-    connection.exec("INSERT INTO borks (title) VALUES('#{title}')")
-    @@spaces << space
+    connection = connect_to_database
+    connection.exec("INSERT INTO borks (title) VALUES('#{space}')")
   end
 
-  # def self.add(space)
-  #   @@spaces << space
-  # end
 
   private
 
   def self.connect_to_database
     if ENV['RACK-ENV'] = 'test'
-      @@con_db = PG.connect :dbname => 'bork_bnb'
+      PG.connect :dbname => 'bork_bnb_test'
     else
-      @@con_db = PG.connect :dbname => 'bork_bnb_test'
+      PG.connect :dbname => 'bork_bnb'
     end
   end
 

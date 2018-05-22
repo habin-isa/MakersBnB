@@ -10,7 +10,7 @@ class MakersBnB < Sinatra::Base
 
   post '/listings' do
     borkName = params['title']
-    Spaces.add(flatName)
+    Spaces.add(borkName)
     redirect '/listings'
   end
 

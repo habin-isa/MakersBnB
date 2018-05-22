@@ -2,22 +2,22 @@
 feature 'Homepage' do
 
   scenario 'Can run app and check page content' do
-    visit('/')
+    visit('/listings')
     expect(page).to have_content 'Bork BnB'
   end
 
   scenario 'Shows form to list your Bork' do
-    visit ('/')
-    expect(page).to have_content 'List your pet space here:'
+    visit ('/listings')
+    expect(page).to have_content 'List your Bork:'
   end
 
   scenario 'Can submit form & listing shows on page' do
-    visit ('/')
+    visit ('/listings')
     fill_in 'title', with: "5* Putney Pug Pit"
     click_button 'List your Bork'
     expect(page).to have_content '5* Putney Pug Pit'
   end
 
-  
+
 
 end
