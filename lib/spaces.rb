@@ -5,7 +5,7 @@ class Spaces
   def self.all
     connection = connect_to_database
     list = connection.exec "SELECT * FROM borks"
-    alpha = list.map { |item| item['title']}
+    spaces = list.map { |item| item['title']}
   end
 
   def self.add(space)
