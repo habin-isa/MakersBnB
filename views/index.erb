@@ -1,25 +1,28 @@
 <html>
+
 <head>
 <link rel="stylesheet" type="text/css" href="index.css">
 </head>
-<body>
 
+<body>
 <div id="headline"> Bork BnB </div>
 <br>
 
-<h3> <%= @spaces %> </h3>
+<ul><% @spaces.each do |space| %>
+  <li><%= space %> </li>
+  <% end %>
+</ul>
 
+<br>
 <h2><form action='/listings' method='post'>
-  Title? <input type='text' name='title'>
-  <br>
-  <br>
-  <center>
-  <button id="button1"> List your Bork: </button>
-</center>
+  Title: <input type='text' name='title'>    <button id="button1"> List your Bork! </button>
 </form></h2>
+</body>
 
-
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br>
 <div class="content">Bork BnB is owned by Bible Borkers Inc.</div>
+<br>
 <footer>Est. 2018</footer>
 
 </body>
