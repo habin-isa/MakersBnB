@@ -8,6 +8,10 @@ class MakersBnB < Sinatra::Base
     erb(:index)
   end
 
+  get '/spaces/new' do
+    erb(:"spaces/new")
+  end
+
   post '/spaces' do
     borkName = params['title']
     Spaces.add(borkName)
