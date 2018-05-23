@@ -1,17 +1,21 @@
 require 'sinatra/base'
-require './lib/spaces.rb'
+require_relative './lib/spaces'
 
 class MakersBnB < Sinatra::Base
 
-  get '/listings' do
+  get '/spaces' do
     @spaces = Spaces.all
     erb(:index)
   end
 
-  post '/listings' do
+  get '/spaces/new' do
+    erb(:"spaces/new")
+  end
+
+  post '/spaces' do
     borkName = params['title']
     Spaces.add(borkName)
-    redirect '/listings'
+    redirect '/spaces'
   end
 
 run! if app_file == $0
