@@ -1,5 +1,4 @@
-
-feature 'Homepage' do
+feature 'Spaces' do
 
   scenario 'Can run app and check page content' do
     visit('/spaces')
@@ -17,7 +16,5 @@ feature 'Homepage' do
     click_button 'List your Bork'
     expect(page).to have_content '5* Putney Pug Pit'
   end
-
-
 
 end

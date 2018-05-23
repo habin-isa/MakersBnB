@@ -1,5 +1,5 @@
 require 'sinatra/base'
-require './lib/spaces.rb'
+require_relative './lib/spaces'
 
 class MakersBnB < Sinatra::Base
 

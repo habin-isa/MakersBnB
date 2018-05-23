@@ -13,7 +13,6 @@ class Spaces
     connection.exec("INSERT INTO borks (title) VALUES('#{space}')")
   end
 
-
   private
 
   def self.connect_to_database
