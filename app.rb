@@ -13,8 +13,8 @@ class MakersBnB < Sinatra::Base
   end
 
   post '/spaces' do
-    borkName = params['title']
-    Spaces.add(borkName)
+    bork = {title: params['title'], description: params['description'], price: params['price']}
+    Spaces.add(bork)
     redirect '/spaces'
   end
 
