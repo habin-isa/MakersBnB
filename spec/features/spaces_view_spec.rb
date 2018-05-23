@@ -11,7 +11,7 @@ feature 'Spaces' do
   end
 
   scenario 'Can submit title and description, shows on page' do
-    visit ('/spaces')
+    visit ('/spaces/new')
     fill_in 'title', with: "5* Putney Pug Pit"
     fill_in 'description', with: "A quiet and quaint getaway in South London"
     fill_in 'price', with: 40
@@ -21,7 +21,7 @@ feature 'Spaces' do
 
   scenario 'Can click List your Bork! to takes you to spaces/new' do
     visit ('/spaces')
-    click_button 'List your Bork!'
+    click_on 'List your Bork!'
     expect(page).to have_current_path('/spaces/new')
   end
 
