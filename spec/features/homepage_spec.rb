@@ -8,7 +8,7 @@ feature 'Homepage' do
 
   scenario 'Shows form to list your Bork' do
     visit ('/listings')
-    expect(page).to have_content 'List your Bork:'
+    expect(page).to have_content 'List your Bork!'
   end
 
   scenario 'Can submit form & listing shows on page' do
