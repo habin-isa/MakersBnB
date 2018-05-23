@@ -5,12 +5,12 @@ class Spaces
   def self.all
     connection = connect_to_database
     list = connection.exec "SELECT * FROM borks"
-    spaces = list.map { |item| item['title']}
+    spaces = list.map { |item| { title: item['title'], description: item['description'], price: item['price'] } }
   end
 
   def self.add(space)
     connection = connect_to_database
-    connection.exec("INSERT INTO borks (title) VALUES('#{space}')")
+    connection.exec("INSERT INTO borks (title, description, price) VALUES('#{space[:title]}', '#{space[:description]}', '#{space[:price]}')")
   end
 
   private

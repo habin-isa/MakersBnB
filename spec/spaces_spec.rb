@@ -4,9 +4,11 @@ describe Spaces do
 
 describe '#all' do
   it 'returns spaces from database' do
-    Spaces.add('Bork 1')
-    Spaces.add('Bigger Bork 2')
-    expect(described_class.all).to eq(['Bork 1', 'Bigger Bork 2'])
+    data01 = { title: 'flat title01', description: 'flat description01', price: '100' }
+    data02 = { title: 'flat title02', description: 'flat description02', price: '200' }
+    Spaces.add(data01)
+    Spaces.add(data02)
+    expect(described_class.all).to eq([data01, data02])
   end
 end
 
