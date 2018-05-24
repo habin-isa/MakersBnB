@@ -10,7 +10,7 @@ feature 'Spaces' do
     expect(page).to have_content 'List your Bork!'
   end
 
-  scenario 'Can click List your Bork! to takes you to spaces/new' do
+  scenario 'Can click List your Bork! to take user to spaces/new' do
     visit ('/spaces')
     click_on 'List your Bork!'
     expect(page).to have_current_path('/spaces/new')
@@ -25,6 +25,12 @@ feature 'Spaces' do
     expect(page).to have_content "5* Hotel"
     expect(page).to have_content "A lovely quiet place"
     expect(page).not_to have_content 91234
+  end
+
+  scenario 'Can click on Requests link to take user to Requests page' do
+    visit ('/spaces')
+    click_on 'Requests'
+    expect(page).to have_current_path('/requests')
   end
 
 end
