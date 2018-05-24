@@ -19,10 +19,16 @@ feature 'Spaces' do
     expect(page).to have_content '5* Putney Pug Pit'
   end
 
-  scenario 'Can click List your Bork! to takes you to spaces/new' do
+  scenario 'Can click List your Bork! to take user to spaces/new' do
     visit ('/spaces')
     click_on 'List your Bork!'
     expect(page).to have_current_path('/spaces/new')
+  end
+
+  scenario 'Can click on Requests link to take user to Requests page' do
+    visit ('/spaces')
+    click_on 'Requests'
+    expect(page).to have_current_path('/requests')
   end
 
 end
