@@ -1,3 +1,5 @@
+
+
 #headline {
   font-size: 75px;
   text-align: center;
@@ -28,4 +30,9 @@ footer {
   height: 25px
   colour: rgb(0,0,33)
   font-size: 20px;
+}
+
+a:link, a:visited {
+  color: pink;
+  text-decoration: underline;
 }

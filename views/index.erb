@@ -14,21 +14,27 @@
 <div id="headline"> Bork BnB </div>
 <br>
 
+<div style="font-family: courier; font-size 20px">
 <ul><% @spaces.each do |space| %>
-  <li><%= space %> </li>
+  <dl><%= space[:title] %>
+    <br>
+    <br>
+      <%= space[:description] %></dl>
   <% end %>
 </ul>
+</div>
+
 <br>
 
-<a href="/spaces/new">List your Bork!</a>
+<a href="/spaces/new" style="font-family: courier">List your Bork!</a>
 
 </body>
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <br>
-<div class="content">Bork BnB is owned by Bible Borkers Inc.</div>
+<div class="content" style="font-family: courier">Bork BnB is owned by Bible Borkers Inc.</div>
 <br>
-<footer>Est. 2018</footer>
+<footer style="font-family: courier">Est. 2018</footer>
 
 </body>
 </html>
