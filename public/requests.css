@@ -1,0 +1,10 @@
+#headline {
+  font-size: 75px;
+  font-family: courier;
+  text-align: center;
+  color: rgb(0,0,33);
+}
+
+#spaces {
+  float: right;
+}
