@@ -1,4 +1,3 @@
-
 #headline {
   font-size: 75px;
   text-align: center;
@@ -25,7 +24,7 @@ background-color: AliceBlue;
   font-size: 20px;
 }
 
-#requests {
+#navbar {
   float: right;
 }
 
