@@ -18,6 +18,10 @@ class MakersBnB < Sinatra::Base
     redirect '/spaces'
   end
 
+  get '/bookings/new' do
+    erb(:bookings)
+  end
+
   get '/requests' do
     erb(:requests)
   end
