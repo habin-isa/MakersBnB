@@ -14,19 +14,22 @@
 <div id="headline"> Bork BnB </div>
 <br>
 
+<center>
 <div style="font-family: courier; font-size 20px">
 <ul><% @spaces.each do |space| %>
-  <dl><%= space[:title] %>
+  <dl id="title_output" style="font-weight: bold; background-color: LightSteelBlue"><%= space[:title] %></dl>
+  <dl style="background-color: AliceBlue"><%= space[:description] %></dl>
     <br>
-    <br>
-      <%= space[:description] %></dl>
   <% end %>
 </ul>
 </div>
+</center>
 
 <br>
 
-<a href="/spaces/new" style="font-family: courier">List your Bork!</a>
+<center>
+<a href="/spaces/new" style="font-family: courier; font-size: 25px; background-color: AliceBlue; padding: 10px; border-style: solid">List your Bork!</a>
+</center>
 
 </body>
 
