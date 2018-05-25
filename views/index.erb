@@ -17,8 +17,9 @@
 <center>
 <div style="font-family: courier; font-size 20px">
 <ul><% @spaces.each do |space| %>
-  <dl id="title_output"><%= space[:title] %></dl>
+  <dl id="title_output" style="font-weight: bold"><%= space[:title] %></dl>
   <dl id="description_output"><%= space[:description] %></dl>
+  <form action="/bookings/new>">Book</form>
     <br>
   <% end %>
 </ul>
