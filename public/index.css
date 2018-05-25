@@ -25,6 +25,10 @@ background-color: AliceBlue;
   font-size: 20px;
 }
 
+#requests {
+  float: right;
+}
+
 .content {
   position:fixed;
   bottom: 10px
