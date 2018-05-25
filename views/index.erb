@@ -11,8 +11,8 @@
 <center>
 <div style="font-family: courier; font-size 20px">
 <ul><% @spaces.each do |space| %>
-  <dl id="title_output"><%= space[:title] %></dl>
-  <dl><%= space[:description] %></dl>
+  <dl id="title_output" style="font-weight: bold; background-color: LightSteelBlue"><%= space[:title] %></dl>
+  <dl style="background-color: AliceBlue"><%= space[:description] %></dl>
     <br>
   <% end %>
 </ul>
@@ -21,7 +21,7 @@
 
 <br>
 
-<a href="/spaces/new" style="font-family: courier">List your Bork!</a>
+<a href="/spaces/new" style="font-family: courier; font-size: 25px; background-color: AliceBlue; padding: 10px; border-style: solid">List your Bork!</a>
 
 </body>
 
