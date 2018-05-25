@@ -8,8 +8,8 @@ class MakersBnB < Sinatra::Base
     erb(:index)
   end
 
-  get '/spaces/new' do
-    erb(:"spaces/new")
+  get '/new' do
+    erb(:new)
   end
 
   post '/spaces' do
