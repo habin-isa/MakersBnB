@@ -8,15 +8,16 @@
 <div id="headline"> Bork BnB </div>
 <br>
 
+<center>
 <div style="font-family: courier; font-size 20px">
 <ul><% @spaces.each do |space| %>
-  <dl><%= space[:title] %>
+  <dl id="title_output"><%= space[:title] %></dl>
+  <dl><%= space[:description] %></dl>
     <br>
-    <br>
-      <%= space[:description] %></dl>
   <% end %>
 </ul>
 </div>
+</center>
 
 <br>
 
