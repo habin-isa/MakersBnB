@@ -1,10 +1,10 @@
 #headline {
   font-size: 75px;
-  font-family: courier;
   text-align: center;
+  font-family: courier;
   color: rgb(0,0,33);
 }
 
-#spaces {
+#navbar {
   float: right;
 }

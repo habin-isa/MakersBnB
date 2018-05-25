@@ -6,8 +6,9 @@
 
 <body>
 
-<div id="requests" >
-<a href="#"> Spaces | </a> 
+<div id="navbar" >
+<a href="/spaces"> Home | </a>
+<a href="/new" > Create your Bork | </a>
 <a href="/requests">Requests</a>
 </div>
 
@@ -17,8 +18,9 @@
 <center>
 <div style="font-family: courier; font-size 20px">
 <ul><% @spaces.each do |space| %>
-  <dl id="title_output" style="font-weight: bold; background-color: LightSteelBlue"><%= space[:title] %></dl>
-  <dl style="background-color: AliceBlue"><%= space[:description] %></dl>
+  <dl id="title_output" style="font-weight: bold"><%= space[:title] %></dl>
+  <dl id="description_output"><%= space[:description] %></dl>
+  <form action="/bookings/new>">Book</form>
     <br>
   <% end %>
 </ul>
@@ -28,12 +30,12 @@
 <br>
 
 <center>
-<a href="/spaces/new" style="font-family: courier; font-size: 25px; background-color: AliceBlue; padding: 10px; border-style: solid">List your Bork!</a>
+<a href="/new" style="font-family: courier; font-size: 25px; background-color: AliceBlue; padding: 10px; border-style: solid">List your Bork!</a>
 </center>
 
 </body>
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br>
 <br>
 <div class="content" style="font-family: courier">Bork BnB is owned by Bible Borkers Inc.</div>
 <br>

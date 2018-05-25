@@ -1,10 +1,19 @@
-
-
 #headline {
   font-size: 75px;
   text-align: center;
   font-family: courier;
   color: rgb(0,0,33);
+}
+
+#title_output {
+  font-weight: bold;
+  background-color: LightSteelBlue;
+  padding: 10px;
+  font-color: black;
+}
+
+#description_output {
+background-color: AliceBlue;
 }
 
 #button1 {
@@ -15,7 +24,7 @@
   font-size: 20px;
 }
 
-#requests {
+#navbar {
   float: right;
 }
 

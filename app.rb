@@ -8,14 +8,18 @@ class MakersBnB < Sinatra::Base
     erb(:index)
   end
 
-  get '/spaces/new' do
-    erb(:"spaces/new")
+  get '/new' do
+    erb(:new)
   end
 
   post '/spaces' do
     bork = {title: params['title'], description: params['description'], price: params['price']}
     Spaces.add(bork)
     redirect '/spaces'
+  end
+
+  get '/bookings/new' do
+    erb(:bookings)
   end
 
   get '/requests' do
