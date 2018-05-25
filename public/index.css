@@ -28,6 +28,10 @@ background-color: AliceBlue;
   float: right;
 }
 
+#sign_up {
+  float: left;
+}
+
 .content {
   position:fixed;
   bottom: 10px
