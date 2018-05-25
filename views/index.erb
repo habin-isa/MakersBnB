@@ -17,8 +17,8 @@
 <center>
 <div style="font-family: courier; font-size 20px">
 <ul><% @spaces.each do |space| %>
-  <dl id="title_output" style="font-weight: bold; background-color: LightSteelBlue"><%= space[:title] %></dl>
-  <dl style="background-color: AliceBlue"><%= space[:description] %></dl>
+  <dl id="title_output"><%= space[:title] %></dl>
+  <dl id="description_output"><%= space[:description] %></dl>
     <br>
   <% end %>
 </ul>
