@@ -18,6 +18,11 @@ class MakersBnB < Sinatra::Base
     redirect '/spaces'
   end
 
+  get '/bookings/new' do
+    erb(:bookings)
+  end
+
+
 run! if app_file == $0
 
 end
