@@ -1,0 +1,10 @@
+#headline {
+  font-size: 50px;
+  text-align: center;
+  font-family: courier;
+  color: rgb(0,0,33);
+}
+
+#navbar {
+  float: right;
+}
